@@ -74,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'recruitment.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
