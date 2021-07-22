@@ -23,8 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'blwze5cxv*04oyt(!j%%(xvw%u%i1x%)+gxnq-!*qk_q5fv5vz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# 可以在控制台看到异常信息
+# 生产环境禁用 DEBUG=False
 DEBUG = True
 
+# 设置那些IP地址可以访问应用
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 添加新app jobs
+    'jobs'
 ]
 
 MIDDLEWARE = [
@@ -73,12 +78,27 @@ WSGI_APPLICATION = 'recruitment.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+# 数据库配置
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'recruitment',
+        'USER': 'root',
+        'PASSWORD': 'admin',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+           'init_command': 'SET default_storage_engine=INNODB',
+        }
     }
 }
+
 
 
 # Password validation
@@ -103,7 +123,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# 项目的默认语言 中文:zh-hans 英文:en-us
+LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'UTC'
 
