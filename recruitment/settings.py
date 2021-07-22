@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     # 添加新app jobs
     'jobs'
 ]
-
+# 中间件
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
