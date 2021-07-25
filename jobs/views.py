@@ -3,6 +3,7 @@ from jobs.models import Cities, JobTypes
 from jobs.models import Job
 from django.template import loader
 from django.http import HttpResponse
+from django.http import Http404
 # Create your views here.
 def joblist(request):
     job_list = Job.objects.order_by('job_type')
@@ -12,3 +13,11 @@ def joblist(request):
         job.city_name = Cities[job.job_city][1]
         job.type_name = JobTypes[job.job_type][1]
     return HttpResponse(template.render(context))
+
+def detail(request,job_id):
+    try:
+        job = Job.objects.get(pk=job_id)
+        job.city_name = Cities[job.job_city][1]
+    except Job.DoesNotExist:
+        raise Http404("Job does not exist")
+    return render(request,'job.html',{'job':job})

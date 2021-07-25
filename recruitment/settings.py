@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 添加新app jobs
     'jobs'
+    # interview
+    'interview'
 ]
 # 中间件
 MIDDLEWARE = [
