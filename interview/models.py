@@ -1,10 +1,21 @@
 from django.db import models
-
+from jobs.models import DEGREE_TYPE
+from django.contrib.auth.models import User
 # Create your models here.
+
+# 第一轮面试结果
+FIRST_INTERVIEW_RESULT_TYPE = ((u'建议复试', u'建议复试'), (u'待定', u'待定'), (u'放弃', u'放弃'))
+
+# 复试面试建议
+INTERVIEW_RESULT_TYPE = ((u'建议录用', u'建议录用'), (u'待定', u'待定'), (u'放弃', u'放弃'))
+
+
+# HR终面结论
+HR_SCORE_TYPE = (('S', 'S'), ('A', 'A'), ('B', 'B'), ('C', 'C'))
 # 定义面试者信息
 class  Candidate(models.Model):
     # 面试者的个人基础信息
-    userid = models.IntergerField(unique=True,blank=True,null=True,verbose_name='应聘者ID')
+    userid = models.IntegerField(unique=True,blank=True,null=True,verbose_name='应聘者ID')
     username = models.CharField(max_length=135,verbose_name='姓名')
     city = models.CharField(max_length=135, verbose_name=u'城市')
     phone = models.CharField(max_length=135, verbose_name=u'手机号码')

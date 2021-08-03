@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 添加新app jobs
-    'jobs'
+    'jobs',
     # interview
     'interview'
 ]
@@ -99,6 +99,7 @@ DATABASES = {
            'charset': 'utf8mb4',
         }
     }
+
 }
 
 
