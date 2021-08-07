@@ -9,7 +9,8 @@ class CandidateAdmin(admin.ModelAdmin):
     list_display = (
         "username","city","bachelor_school","first_score","first_result","first_interviewer_user","second_result","second_interviewer_user","hr_score","hr_result","last_editor"
     )
-    
+    #search_fields 指定那些字段用于搜索过滤
+    search_fields = ()
     #页面字段显示太多，进行分类
     # ("username", "city", "phone", "email") 用元组括起来表示放在一行
     fieldsets = (
