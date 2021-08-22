@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Open Ldap
+    'django_python3_ldap',
     # 添加新app jobs
     'jobs',
     # interview
@@ -142,3 +144,31 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# LDAP配置
+LDAP_AUTH_URL = "ldap://127.0.0.1:389"
+# LDAP TLS
+LDAP_AUTH_USE_TLS = False
+
+LDAP_AUTH_SEARCH_BASE = 'dc=ihopeit, dc=com'
+
+LDAP_AUTH_OBJECT_CLASS = 'inetOrgPerson'
+
+# User model field mapped to the LDAP
+# attributes that represent them
+LDAP_AUTH_USER_FIELDS = {
+    "username":"cn",   # cn: common name
+    "first_name" : "givenName",
+    "last_name": "sn", # sn: surface name
+    "email": "mail",
+}
+
+# A tuple of django model fields used to uniquely identify a user
+LDAP_AUTH_USER_LOOKUP_FIELDS = ("username",)  # django username作为登录用户
+
+LDAP_AUTH_CLEAN_USER_DATA = "django_python3_ldap.utils.clean_user_data"
+LDAP_AUTH_CONNECTION_USERNAME = "admin"
+LDAP_AUTH_CONNECTION_PASSWORD = "JonSn0wbcxnwei3529"
+
+# django_python3_ldap.auth.LDAPBackend ldap登录认证的类  django.contrib.auth.backends.ModelBackend: django登录认证
+AUTHENTICATION_BACKENDS = {'django_python3_ldap.auth.LDAPBackend','django.contrib.auth.backends.ModelBackend'}
