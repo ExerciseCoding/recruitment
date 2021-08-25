@@ -146,7 +146,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # LDAP配置
-LDAP_AUTH_URL = "ldap://127.0.0.1:389"
+LDAP_AUTH_URL = "ldap://192.168.1.5:389"
 # LDAP TLS
 LDAP_AUTH_USE_TLS = False
 
@@ -168,7 +168,7 @@ LDAP_AUTH_USER_LOOKUP_FIELDS = ("username",)  # django username作为登录用�
 
 LDAP_AUTH_CLEAN_USER_DATA = "django_python3_ldap.utils.clean_user_data"
 LDAP_AUTH_CONNECTION_USERNAME = "admin"
-LDAP_AUTH_CONNECTION_PASSWORD = "JonSn0wbcxnwei3529"
-
+# LDAP_AUTH_CONNECTION_PASSWORD = "JonSn0wbcxnwei3529"
+LDAP_AUTH_CONNECTION_PASSWORD = "admin_passwd_4_ldap"
 # django_python3_ldap.auth.LDAPBackend ldap登录认证的类  django.contrib.auth.backends.ModelBackend: django登录认证
 AUTHENTICATION_BACKENDS = {'django_python3_ldap.auth.LDAPBackend','django.contrib.auth.backends.ModelBackend'}
