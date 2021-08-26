@@ -30,7 +30,16 @@ DEBUG = True
 # 设置那些IP地址可以访问应用
 ALLOWED_HOSTS = []
 
+import platform
+from pathlib import Path
 
+if platform.system() == "Linux" or platform.system() == "Windows":
+    # linux or windows
+    Path(LOG_DIR).mkdir(parents=True, exist_ok=True)
+elif platform.system() == "Darwin" or platform.system() == "Mac":
+    # OS X, 
+    # you could not create a folder at /data/logs dure to OS default policy
+    LOG_DIR = BASE_DIR
 # Application definition
 
 INSTALLED_APPS = [
@@ -184,20 +193,23 @@ LOGGING = {
     # handlers: 处理器日志的处理器，记录到文件还是控制台
     'formatters': {
         'simple': { # exact format is not important, this is the minimum information
+            # asctime: 当前时间 name: 那个类  lineno: 多少行  levelname: 日志级别 message: 消息
             'format': '%(asctime)s %(name)-12s %(lineno)d %(levelname)-8s %(message)s',
         },
     },
     'handlers': {
+        # 控制台输simple格式
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },
-
+        # 错误级别的日志发送到邮件
         'mail_admins': { # Add Handler for mail_admins for `warning` and above
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler',
         },
         'file': {
+            # 将日志信息记录到文件
             #'level': 'INFO',
             'class': 'logging.FileHandler',
             'formatter': 'simple',
@@ -211,7 +223,9 @@ LOGGING = {
             'filename': os.path.join(LOG_DIR, 'recruitment.performance.log'),
         },
     },
-
+    
+    # 系统全级别默认日志记录器
+    # 往控制台和文件同时输出
     'root': {
         'handlers': ['console', 'file'],
         'level': 'INFO',
