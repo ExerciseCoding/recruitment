@@ -172,3 +172,61 @@ LDAP_AUTH_CONNECTION_USERNAME = "admin"
 LDAP_AUTH_CONNECTION_PASSWORD = "admin_passwd_4_ldap"
 # django_python3_ldap.auth.LDAPBackend ldap登录认证的类  django.contrib.auth.backends.ModelBackend: django登录认证
 AUTHENTICATION_BACKENDS = {'django_python3_ldap.auth.LDAPBackend','django.contrib.auth.backends.ModelBackend'}
+
+# 日志记录
+
+LOGGING = {
+    # version: 定义日志记录格式的版本号
+    'version': 1,
+    # 是否禁用现在已有的其他logger
+    'disable_existing_loggers': False,
+    # filter过滤器，定义处理链
+    # handlers: 处理器日志的处理器，记录到文件还是控制台
+    'formatters': {
+        'simple': { # exact format is not important, this is the minimum information
+            'format': '%(asctime)s %(name)-12s %(lineno)d %(levelname)-8s %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+
+        'mail_admins': { # Add Handler for mail_admins for `warning` and above
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+        },
+        'file': {
+            #'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'simple',
+            'filename': os.path.join(LOG_DIR, 'recruitment.admin.log'),
+        },
+
+        'performance': {
+            #'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'formatter': 'simple',
+            'filename': os.path.join(LOG_DIR, 'recruitment.performance.log'),
+        },
+    },
+
+    'root': {
+        'handlers': ['console', 'file'],
+        'level': 'INFO',
+    },
+    # loggers: 日志记录器
+    'loggers': {
+        "django_python3_ldap": {
+            "handlers": ["console", "file"],
+            "level": "DEBUG",
+        },
+
+        "interview.performance": {
+            "handlers": ["console", "performance"],
+            "level": "INFO",
+            "propagate": False,
+        },
+    },
+}
