@@ -1,3 +1,5 @@
 2021-08-26 16:05:06,452 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
 2021-08-26 16:09:14,990 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
 2021-08-26 16:09:26,000 interview.admin 46 INFO     admin exported 1 candidate records 
+2021-08-27 16:15:49,917 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-27 16:17:25,405 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
