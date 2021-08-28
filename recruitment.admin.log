@@ -165,3 +165,22 @@ django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB8\\x
 2021-08-28 08:08:54,542 interview.admin 63 INFO     interviewer is in user's group for 二面面试官
 2021-08-28 08:09:24,854 interview.admin 63 INFO     interviewer is in user's group for 一面面试官
 2021-08-28 08:09:24,857 interview.admin 63 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:21:09,005 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:21:14,952 interview.admin 68 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:21:14,956 interview.admin 68 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:22:18,555 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/candidate_fieldset.py changed, reloading.
+2021-08-28 08:22:19,056 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:22:23,426 interview.admin 68 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:22:23,430 interview.admin 68 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:25:55,889 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/candidate_fieldset.py changed, reloading.
+2021-08-28 08:25:56,442 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:26:02,950 interview.admin 68 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:26:02,955 interview.admin 68 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:38:39,663 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 08:38:40,330 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:45:20,872 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 08:45:21,338 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:47:40,476 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 08:47:40,476 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 08:51:23,808 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 08:51:23,808 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
