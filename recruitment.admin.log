@@ -12,3 +12,156 @@
 2021-08-28 01:27:35,842 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
 2021-08-28 01:38:45,122 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
 2021-08-28 01:38:45,746 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 02:10:48,633 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 02:11:00,358 django.request 224 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1697, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/liuhao/PythonProject/recruitment/interview/admin.py", line 74, in get_changelist_instance
+    self.list_editable = self.get_list_editable(request)
+  File "/Users/liuhao/PythonProject/recruitment/interview/admin.py", line 69, in get_list_editable
+    if request.user.is_super_user or 'hr' in groups_names:
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/functional.py", line 247, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'User' object has no attribute 'is_super_user'
+2021-08-28 02:13:16,218 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 02:13:16,870 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 02:13:32,316 django.request 224 ERROR    Internal Server Error: /admin/interview/candidate/
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1697, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Users/liuhao/PythonProject/recruitment/interview/admin.py", line 74, in get_changelist_instance
+    self.list_editable = self.get_list_editable(request)
+  File "/Users/liuhao/PythonProject/recruitment/interview/admin.py", line 70, in get_list_editable
+    return self.default_list_editable
+AttributeError: 'CandidateAdmin' object has no attribute 'default_list_editable'
+2021-08-28 02:15:18,093 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 02:15:18,638 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 02:17:39,146 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/settings/base.py changed, reloading.
+2021-08-28 02:17:39,730 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 07:05:38,858 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 07:05:39,535 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 07:10:42,618 django.request 224 ERROR    Internal Server Error: /admin/auth/user/2/change/
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+MySQLdb._exceptions.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB8\\x80\\xE9\\x9D\\xA2...' for column 'first_name' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1660, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1099, in save_model
+    obj.save()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 763, in save_base
+    updated = self._save_table(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 845, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/models/base.py", line 899, in _do_update
+    return filtered._update(values) > 0
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/models/query.py", line 802, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1559, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/db/backends/mysql/base.py", line 73, in execute
+    return self.cursor.execute(query, args)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 206, in execute
+    res = self._query(query)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/cursors.py", line 319, in _query
+    db.query(q)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/MySQLdb/connections.py", line 259, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB8\\x80\\xE9\\x9D\\xA2...' for column 'first_name' at row 1")
+2021-08-28 07:50:51,182 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:02:47,978 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 08:02:47,978 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 08:03:19,275 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 08:03:19,275 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 08:04:23,708 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/models.py changed, reloading.
+2021-08-28 08:04:24,474 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:05:08,467 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/models.py changed, reloading.
+2021-08-28 08:05:09,141 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:05:41,098 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 08:08:54,539 interview.admin 63 INFO     interviewer is in user's group for 二面面试官
+2021-08-28 08:08:54,542 interview.admin 63 INFO     interviewer is in user's group for 二面面试官
+2021-08-28 08:09:24,854 interview.admin 63 INFO     interviewer is in user's group for 一面面试官
+2021-08-28 08:09:24,857 interview.admin 63 INFO     interviewer is in user's group for 一面面试官

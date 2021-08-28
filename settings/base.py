@@ -43,6 +43,8 @@ elif platform.system() == "Darwin" or platform.system() == "Mac":
 # Application definition
 
 INSTALLED_APPS = [
+    # 切换成grappelli主题
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

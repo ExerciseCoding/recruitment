@@ -63,10 +63,12 @@ class CandidateAdmin(admin.ModelAdmin):
             logger.info("interviewer is in user's group for %s" % request.user.username)
             return ('first_interviewer_user','second_interviewer_user',)
         return ()
+
+    default_list_editable = ('first_interviewer_user', 'second_interviewer_user',)
     # hr在列表页可以编辑面试官
     def get_list_editable(self, request):
         groups_names = self.get_group_names(request.user)
-        if request.user.is_super_user or 'hr' in groups_names:
+        if request.user.is_superuser or 'hr' in groups_names:
             return self.default_list_editable
         return ()
     
@@ -93,7 +95,7 @@ class CandidateAdmin(admin.ModelAdmin):
     ordering = ('hr_result', 'second_result', 'first_result')
     # 页面字段显示太多，进行分类
     # ("username", "city", "phone", "email") 用元组括起来表示放在一行
-    fieldsets = (
+    default_fieldsets = (
         (None, {'fields': ("userid", ("username", "city", "phone"), ("email", "apply_position", "born_address"),
                            ("gender", "candidate_remark"),
                            ("bachelor_school", "master_school", "doctor_school", "major", "degree"),
@@ -113,6 +115,47 @@ class CandidateAdmin(admin.ModelAdmin):
                                 ("hr_logic_ability", "hr_potential", "hr_stability"), "hr_advantage", "hr_disadvantage",
                                 "hr_result", "hr_interviewer_user", "hr_remark",)}),
     )
+
+    # 一面面试官编辑时显示的内容
+    default_fieldsets_first = (
+        (None, {'fields': ("userid", ("username", "city", "phone"), ("email", "apply_position", "born_address"),
+                           ("gender", "candidate_remark"),
+                           ("bachelor_school", "master_school", "doctor_school", "major", "degree"),
+                           ("test_score_of_general_ability", "paper_score"), "last_editor",
+                           )}),
+        ('第一轮面试记录', {'fields': (
+            ("first_score", "first_learning_ability", "first_professional_competency"), "first_advantage",
+            "first_disadvantage", "first_result", "first_recommend_position", "first_interviewer_user", "first_remark",
+        )}),
+    )
+    # 二面面试官编辑时显示的内容
+    default_fieldsets_second = (
+        (None, {'fields': ("userid", ("username", "city", "phone"), ("email", "apply_position", "born_address"),
+                           ("gender", "candidate_remark"),
+                           ("bachelor_school", "master_school", "doctor_school", "major", "degree"),
+                           ("test_score_of_general_ability", "paper_score"), "last_editor",
+                           )}),
+        ('第一轮面试记录', {'fields': (
+            ("first_score", "first_learning_ability", "first_professional_competency"), "first_advantage",
+            "first_disadvantage", "first_result", "first_recommend_position", "first_interviewer_user", "first_remark",
+        )}),
+        ('第二轮面试记录', {'fields': (
+            ("second_score", "second_learning_ability"),
+            ("second_professional_competency", "second_pursue_of_excellence"),
+            ("second_communication_ability", "second_pressure_score"), "second_advantage", "second_disadvantage",
+            "second_result", "second_recommend_position", "second_interviewer_user", "second_remark",
+        )}),
+    )
+    # 一面面试官仅填写一面反馈， 二面面试官可以填写二面反馈
+    def get_fieldsets(self, request, obj=None):
+        group_names = self.get_group_names(request.user)
+        if 'interviewer' in group_names and obj.first_interviewer_user == request.user:
+            return self.default_fieldsets_first
+        if 'interviewer' in group_names and obj.second_interviewer_user == request.user:
+            return self.default_fieldsets_second
+        return self.default_fieldsets
+
+
 
 
 admin.site.register(Candidate, CandidateAdmin)

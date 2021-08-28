@@ -20,8 +20,9 @@ from django.utils.translation import gettext as _
 urlpatterns = [
     # 将jobs的urls引用进来
     url("^", include("jobs.urls")),
+    path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
-
+    
 ]
 
 # 定义站点标题 并设置多语言

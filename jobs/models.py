@@ -31,3 +31,7 @@ class Job(models.Model):
     creator = models.ForeignKey(User, verbose_name="创建人", on_delete=models.SET_NULL, null=True)
     created_date = models.DateTimeField(verbose_name="创建日期", default=datetime.now)
     modifield_date = models.DateTimeField(verbose_name="修改时间", default=datetime.now)
+    class Meta:
+        db_table = u'jobs'
+        verbose_name = u'职位'
+        verbose_name_plural = u'职位'
