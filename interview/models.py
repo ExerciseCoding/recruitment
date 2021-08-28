@@ -55,6 +55,7 @@ class  Candidate(models.Model):
     first_remark = models.CharField(max_length=135, blank=True, verbose_name=u'初试备注')
 
     # 第二轮面试记录
+    # hepl_text 页面上的提示设置
     second_score = models.DecimalField(decimal_places=1, null=True, max_digits=2, blank=True, verbose_name=u'专业复试得分',
                                        help_text=u'1-5分，极优秀: >=4.5，优秀: 4-4.4，良好: 3.5-3.9，一般: 3-3.4，较差: <3分')
     second_learning_ability = models.DecimalField(decimal_places=1, null=True, max_digits=2, blank=True,

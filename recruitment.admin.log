@@ -3,3 +3,12 @@
 2021-08-26 16:09:26,000 interview.admin 46 INFO     admin exported 1 candidate records 
 2021-08-27 16:15:49,917 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
 2021-08-27 16:17:25,405 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 01:15:30,594 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 01:19:26,389 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/models.py changed, reloading.
+2021-08-28 01:19:27,055 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 01:21:41,734 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 01:21:42,199 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 01:27:35,208 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 01:27:35,842 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 01:38:45,122 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-28 01:38:45,746 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
