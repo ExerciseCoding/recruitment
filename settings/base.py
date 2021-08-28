@@ -56,7 +56,8 @@ INSTALLED_APPS = [
     # 添加新app jobs
     'jobs',
     # interview
-    'interview'
+    'interview',
+    'DingtalkChatbot'
 ]
 # 中间件
 MIDDLEWARE = [

@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from datetime import datetime
 from interview import candidate_fieldset as cf
 from django.db.models import Q
+from interview import dingtalk
 import csv
 import logging
 
@@ -12,6 +13,19 @@ exportable_fields = (
     'username', 'city', 'phone', 'bachelor_school', 'master_school', 'degree', 'first_result', 'first_interviewer_user',
     'second_result', 'second_interviewer_user',
     'hr_result', 'hr_score', 'hr_remark', 'hr_interviewer_user')
+
+
+# 钉钉通知一面面试官面试
+def notify_interviewer(modeladmin, request, queryset):
+    candidates = ""
+    interviewers = ""
+    for obj in queryset:
+        candidates = obj.username + ";" + candidates
+        interviewers = obj.first_interviewer_user.username + ";" + interviewers
+    dingtalk.send("候选人 %s 进入面试环节，亲爱的面试官，请准备好面试: %s" % (candidates, interviewers))
+
+
+notify_interviewer.short_description = u'通知一面面试官'
 
 
 def export_model_as_csv(modeladmin, request, queryset):
@@ -55,6 +69,7 @@ export_model_as_csv.short_description = u'导出为CSV文件'
 # 导出导出的权限
 export_model_as_csv.allowed_permissions = ('export',)
 
+
 class CandidateAdmin(admin.ModelAdmin):
     # 设置页面只读字段
     # readonly_fields = ('first_interviewer_user','second_interviewer_user',)
@@ -72,16 +87,19 @@ class CandidateAdmin(admin.ModelAdmin):
         return ()
 
     default_list_editable = ('first_interviewer_user', 'second_interviewer_user',)
+
     # 判断当前用户是否有导出权限
     def has_export_permission(self, request):
         opts = self.opts
         return request.user.has_perm('%s.%s' % (opts.app_label, 'export'))
+
     # hr在列表页可以编辑面试官
     def get_list_editable(self, request):
         groups_names = self.get_group_names(request.user)
         if request.user.is_superuser or 'hr' in groups_names:
             return self.default_list_editable
         return ()
+
     # 对于非面试官, 非HR, 获取自己是一面面试官或者二面面试官的候选人集合: s
     def get_queryset(self, request):
         qs = super(CandidateAdmin, self).get_queryset(request)
@@ -92,6 +110,7 @@ class CandidateAdmin(admin.ModelAdmin):
             # Q表达式可以表示去数据库做or或者and
             Q(first_interviewer_user=request.user) | Q(second_interviewer_user=request.user)
         )
+
     def get_changelist_instance(self, request):
         self.list_editable = self.get_list_editable(request)
         return super(CandidateAdmin, self).get_changelist_instance(request)
@@ -100,7 +119,7 @@ class CandidateAdmin(admin.ModelAdmin):
     exclude = ('creator', 'created_date', 'modified_date')
 
     # 将导入为csv的函数放入此处
-    actions = [export_model_as_csv, ]
+    actions = (export_model_as_csv,notify_interviewer, )
     # 定义列表页展示字段
     list_display = (
         "username", "city", "bachelor_school", "first_score", "first_result", "first_interviewer_user", "second_result",
