@@ -4,11 +4,12 @@ from django.http import HttpResponse
 from datetime import datetime
 import csv
 import logging
+
 logger = logging.getLogger(__name__)
 exportable_fields = (
-'username', 'city', 'phone', 'bachelor_school', 'master_school', 'degree', 'first_result', 'first_interviewer_user',
-'second_result', 'second_interviewer_user',
-'hr_result', 'hr_score', 'hr_remark', 'hr_interviewer_user')
+    'username', 'city', 'phone', 'bachelor_school', 'master_school', 'degree', 'first_result', 'first_interviewer_user',
+    'second_result', 'second_interviewer_user',
+    'hr_result', 'hr_score', 'hr_remark', 'hr_interviewer_user')
 
 
 def export_model_as_csv(modeladmin, request, queryset):
@@ -46,8 +47,10 @@ def export_model_as_csv(modeladmin, request, queryset):
     logger.info("%s exported %s candidate records " % (request.user, len(queryset)))
     return response
 
+
 # 给export_model_as_csv函数设置别名
 export_model_as_csv.short_description = u'导出为CSV文件'
+
 
 class CandidateAdmin(admin.ModelAdmin):
     # 设置页面只读字段
@@ -57,24 +60,27 @@ class CandidateAdmin(admin.ModelAdmin):
         for g in user.groups.all():
             group_names.append(g.name)
         return group_names
+
     def get_readonly_fields(self, request, obj):
         group_names = self.get_group_names(request.user)
         if 'interviewer' in group_names:
             logger.info("interviewer is in user's group for %s" % request.user.username)
-            return ('first_interviewer_user','second_interviewer_user',)
+            return ('first_interviewer_user', 'second_interviewer_user',)
         return ()
 
     default_list_editable = ('first_interviewer_user', 'second_interviewer_user',)
+
     # hr在列表页可以编辑面试官
     def get_list_editable(self, request):
         groups_names = self.get_group_names(request.user)
         if request.user.is_superuser or 'hr' in groups_names:
             return self.default_list_editable
         return ()
-    
+
     def get_changelist_instance(self, request):
         self.list_editable = self.get_list_editable(request)
         return super(CandidateAdmin, self).get_changelist_instance(request)
+
     # 去掉页面不展示的字段
     exclude = ('creator', 'created_date', 'modified_date')
 
@@ -146,6 +152,7 @@ class CandidateAdmin(admin.ModelAdmin):
             "second_result", "second_recommend_position", "second_interviewer_user", "second_remark",
         )}),
     )
+
     # 一面面试官仅填写一面反馈， 二面面试官可以填写二面反馈
     def get_fieldsets(self, request, obj=None):
         group_names = self.get_group_names(request.user)
@@ -154,8 +161,6 @@ class CandidateAdmin(admin.ModelAdmin):
         if 'interviewer' in group_names and obj.second_interviewer_user == request.user:
             return self.default_fieldsets_second
         return self.default_fieldsets
-
-
 
 
 admin.site.register(Candidate, CandidateAdmin)
