@@ -184,3 +184,297 @@ django.db.utils.OperationalError: (1366, "Incorrect string value: '\\xE4\\xB8\\x
 2021-08-28 08:47:40,476 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
 2021-08-28 08:51:23,808 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
 2021-08-28 08:51:23,808 django_python3_ldap.ldap 196 WARNING  LDAP bind failed: socket connection error while opening: [Errno 61] Connection refused
+2021-08-28 10:51:27,252 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 10:51:49,837 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:52:17,330 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:52:19,694 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:52:20,476 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:52:38,775 django.request 224 WARNING  Not Found: /accounts/accounts/
+2021-08-28 10:52:42,917 django.request 224 WARNING  Not Found: /accounts/
+2021-08-28 10:53:00,246 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:53:28,112 django.request 224 WARNING  Not Found: /register
+2021-08-28 10:53:58,531 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:54:13,455 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:54:49,586 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:55:34,835 django.request 224 WARNING  Not Found: /accounts/ register/
+2021-08-28 10:55:39,381 django.request 224 WARNING  Not Found: /accounts/ register/
+2021-08-28 10:55:44,493 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 10:57:57,895 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 11:00:20,159 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/settings/base.py changed, reloading.
+2021-08-28 11:00:21,154 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:00:49,968 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 11:01:06,539 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/settings/base.py changed, reloading.
+2021-08-28 11:01:07,441 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:01:20,138 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 11:02:58,306 django.request 224 WARNING  Not Found: /
+2021-08-28 11:03:13,354 django.request 224 WARNING  Not Found: /accounts/
+2021-08-28 11:03:20,614 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 11:05:53,204 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/settings/base.py changed, reloading.
+2021-08-28 11:05:54,189 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:06:08,462 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:06:17,970 django.request 224 WARNING  Not Found: /rango/
+2021-08-28 11:06:44,132 django.request 224 WARNING  Not Found: /rango/
+2021-08-28 11:06:57,368 django.request 224 WARNING  Not Found: /rango/
+2021-08-28 11:07:17,554 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/settings/base.py changed, reloading.
+2021-08-28 11:07:18,430 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:07:20,708 django.request 224 WARNING  Not Found: /accounts/profile/
+2021-08-28 11:12:09,510 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/recruitment/urls.py changed, reloading.
+2021-08-28 11:12:10,341 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:12:18,926 django.request 224 WARNING  Not Found: /
+2021-08-28 11:12:29,646 django.request 224 WARNING  Not Found: /
+2021-08-28 11:13:41,733 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/urls.py changed, reloading.
+2021-08-28 11:13:42,498 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:13:50,907 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/urls.py changed, reloading.
+2021-08-28 11:13:51,629 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 11:17:45,072 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/recruitment/urls.py changed, reloading.
+2021-08-28 11:17:45,975 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 12:00:53,942 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/settings/base.py changed, reloading.
+2021-08-28 12:00:54,901 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 12:07:13,752 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/recruitment/urls.py changed, reloading.
+2021-08-28 12:07:14,607 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 12:07:37,749 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 12:07:53,511 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/recruitment/urls.py changed, reloading.
+2021-08-28 12:07:54,238 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-28 12:08:01,686 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/recruitment/urls.py changed, reloading.
+2021-08-28 12:08:02,323 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-29 14:41:09,383 django.security.DisallowedHost 99 ERROR    Invalid HTTP_HOST header: '0.0.0.0:9999'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+2021-08-29 14:41:09,473 django.request 224 WARNING  Bad Request: /
+2021-08-29 14:41:09,754 django.security.DisallowedHost 99 ERROR    Invalid HTTP_HOST header: '0.0.0.0:9999'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+2021-08-29 14:41:09,802 django.request 224 WARNING  Bad Request: /favicon.ico
+2021-08-29 14:41:21,767 django.security.DisallowedHost 99 ERROR    Invalid HTTP_HOST header: '0.0.0.0:9999'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+2021-08-29 14:41:21,798 django.request 224 WARNING  Bad Request: /admin
+2021-08-29 14:41:21,920 django.security.DisallowedHost 99 ERROR    Invalid HTTP_HOST header: '0.0.0.0:9999'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+2021-08-29 14:41:21,951 django.request 224 WARNING  Bad Request: /favicon.ico
+2021-08-29 14:41:51,088 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-29 14:41:52,916 django.request 224 ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'translate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/views.py", line 24, in joblist
+    return HttpResponse(template.render(context))
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'translate'. Did you forget to register or load this tag?
+2021-08-29 14:42:19,085 django.request 224 ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'translate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/views.py", line 24, in joblist
+    return HttpResponse(template.render(context))
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 531, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 7: 'translate'. Did you forget to register or load this tag?
+2021-08-29 14:43:58,908 django.request 224 ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'translate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/views.py", line 24, in joblist
+    return HttpResponse(template.render(context))
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'translate', expected 'elif'，'else' or 'endif'. Did you forget to register or load this tag?
+2021-08-29 14:44:35,960 django.request 224 ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'blocktranslate'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/views.py", line 24, in joblist
+    return HttpResponse(template.render(context))
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 170, in render
+    return self._render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 905, in render_annotated
+    return self.render(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader_tags.py", line 103, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loaders/base.py", line 29, in get_template
+    return Template(
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 478, in parse
+    raise self.error(token, e)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/defaulttags.py", line 965, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/base.py", line 522, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'blocktranslate', expected 'elif'，'else' or 'endif'. Did you forget to register or load this tag?
+2021-08-29 14:47:23,180 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-29 14:47:24,007 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-29 14:47:26,567 django.request 224 ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/http/response.py", line 119, in __init__
+    self.status_code = int(status)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/views.py", line 24, in joblist
+    return HttpResponse(request, 'joblist.html', context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/http/response.py", line 329, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/http/response.py", line 121, in __init__
+    raise TypeError('HTTP status code must be an integer.')
+TypeError: HTTP status code must be an integer.
+2021-08-29 14:47:28,029 django.request 224 ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/http/response.py", line 119, in __init__
+    self.status_code = int(status)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'dict'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/views.py", line 24, in joblist
+    return HttpResponse(request, 'joblist.html', context)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/http/response.py", line 329, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/http/response.py", line 121, in __init__
+    raise TypeError('HTTP status code must be an integer.')
+TypeError: HTTP status code must be an integer.
+2021-08-29 14:47:55,076 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-29 14:47:55,793 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader

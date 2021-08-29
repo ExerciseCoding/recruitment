@@ -19,10 +19,13 @@ from django.conf.urls import include, url
 from django.utils.translation import gettext as _
 urlpatterns = [
     # 将jobs的urls引用进来
-    url("^", include("jobs.urls")),
+
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     
+    # 注册用户登录接口
+    url('accounts/', include('registration.backends.simple.urls')),
+    url("", include("jobs.urls")),
 ]
 
 # 定义站点标题 并设置多语言

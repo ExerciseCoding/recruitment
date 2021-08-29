@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -45,6 +44,7 @@ elif platform.system() == "Darwin" or platform.system() == "Mac":
 INSTALLED_APPS = [
     # 切换成grappelli主题
     'grappelli',
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,7 +57,7 @@ INSTALLED_APPS = [
     'jobs',
     # interview
     'interview',
-    'DingtalkChatbot'
+
 ]
 # 中间件
 MIDDLEWARE = [
@@ -109,14 +109,12 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {
-           'init_command': 'SET default_storage_engine=INNODB',
-           'charset': 'utf8mb4',
+            'init_command': 'SET default_storage_engine=INNODB',
+            'charset': 'utf8mb4',
         }
     }
 
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -136,7 +134,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -150,7 +147,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -170,9 +166,9 @@ LDAP_AUTH_OBJECT_CLASS = 'inetOrgPerson'
 # User model field mapped to the LDAP
 # attributes that represent them
 LDAP_AUTH_USER_FIELDS = {
-    "username":"cn",   # cn: common name
-    "first_name" : "givenName",
-    "last_name": "sn", # sn: surface name
+    "username": "cn",  # cn: common name
+    "first_name": "givenName",
+    "last_name": "sn",  # sn: surface name
     "email": "mail",
 }
 
@@ -184,7 +180,7 @@ LDAP_AUTH_CONNECTION_USERNAME = None
 # LDAP_AUTH_CONNECTION_PASSWORD = "JonSn0wbcxnwei3529"
 LDAP_AUTH_CONNECTION_PASSWORD = None
 # django_python3_ldap.auth.LDAPBackend ldap登录认证的类  django.contrib.auth.backends.ModelBackend: django登录认证
-AUTHENTICATION_BACKENDS = {'django_python3_ldap.auth.LDAPBackend','django.contrib.auth.backends.ModelBackend'}
+AUTHENTICATION_BACKENDS = {'django_python3_ldap.auth.LDAPBackend', 'django.contrib.auth.backends.ModelBackend'}
 
 # 日志记录
 
@@ -196,7 +192,7 @@ LOGGING = {
     # filter过滤器，定义处理链
     # handlers: 处理器日志的处理器，记录到文件还是控制台
     'formatters': {
-        'simple': { # exact format is not important, this is the minimum information
+        'simple': {  # exact format is not important, this is the minimum information
             # asctime: 当前时间 name: 那个类  lineno: 多少行  levelname: 日志级别 message: 消息
             'format': '%(asctime)s %(name)-12s %(lineno)d %(levelname)-8s %(message)s',
         },
@@ -208,26 +204,26 @@ LOGGING = {
             'formatter': 'simple',
         },
         # 错误级别的日志发送到邮件
-        'mail_admins': { # Add Handler for mail_admins for `warning` and above
+        'mail_admins': {  # Add Handler for mail_admins for `warning` and above
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler',
         },
         'file': {
             # 将日志信息记录到文件
-            #'level': 'INFO',
+            # 'level': 'INFO',
             'class': 'logging.FileHandler',
             'formatter': 'simple',
             'filename': os.path.join(LOG_DIR, 'recruitment.admin.log'),
         },
 
         'performance': {
-            #'level': 'INFO',
+            # 'level': 'INFO',
             'class': 'logging.FileHandler',
             'formatter': 'simple',
             'filename': os.path.join(LOG_DIR, 'recruitment.performance.log'),
         },
     },
-    
+
     # 系统全级别默认日志记录器
     # 往控制台和文件同时输出
     'root': {
@@ -248,3 +244,14 @@ LOGGING = {
         },
     },
 }
+
+# 设为 True，允许用户注册
+REGISTRATION_OPEN = True
+# 留一周的激活时间；当然，也可以设为其他值
+ACCOUNT_ACTIVATION_DAYS = 7
+# 设为 True，注册后自动登录
+REGISTRATION_AUTO_LOGIN = True
+# 登录后呈现给用户的页面
+# LOGIN_REDIRECT_URL = '/rango/'
+# 未登录以及访问需要验证身份的页面时重定向的页面
+LOGIN_URL = '/accounts/login/'
