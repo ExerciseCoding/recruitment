@@ -5,6 +5,9 @@ from datetime import datetime
 from interview import candidate_fieldset as cf
 from django.db.models import Q
 from interview import dingtalk
+from django.contrib import messages
+from jobs.models import Resume
+from django.utils.safestring import mark_safe
 import csv
 import logging
 
@@ -23,6 +26,7 @@ def notify_interviewer(modeladmin, request, queryset):
         candidates = obj.username + ";" + candidates
         interviewers = obj.first_interviewer_user.username + ";" + interviewers
     dingtalk.send("候选人 %s 进入面试环节，亲爱的面试官，请准备好面试: %s" % (candidates, interviewers))
+    messages.add_message(request, messages.INFO, '已经成功发送面试通知')
 
 
 notify_interviewer.short_description = u'通知一面面试官'
@@ -85,7 +89,7 @@ class CandidateAdmin(admin.ModelAdmin):
             logger.info("interviewer is in user's group for %s" % request.user.username)
             return ('first_interviewer_user', 'second_interviewer_user',)
         return ()
-
+    
     default_list_editable = ('first_interviewer_user', 'second_interviewer_user',)
 
     # 判断当前用户是否有导出权限
@@ -115,6 +119,16 @@ class CandidateAdmin(admin.ModelAdmin):
         self.list_editable = self.get_list_editable(request)
         return super(CandidateAdmin, self).get_changelist_instance(request)
 
+    def get_resume(self, obj):
+        if not obj.phone:
+            return ""
+        resumes = Resume.objects.filter(phone=obj.phone)
+        if resumes and len(resumes) > 0:
+            return mark_safe(u'<a href="/resume/%s" target="_blank">%s</a' % (resumes[0].id, "查看简历"))
+        return ""
+
+    get_resume.short_description = '查看简历'
+    get_resume.allow_tags = True
     # 去掉页面不展示的字段
     exclude = ('creator', 'created_date', 'modified_date')
 
@@ -122,7 +136,7 @@ class CandidateAdmin(admin.ModelAdmin):
     actions = (export_model_as_csv,notify_interviewer, )
     # 定义列表页展示字段
     list_display = (
-        "username", "city", "bachelor_school", "first_score", "first_result", "first_interviewer_user", "second_result",
+        "username", "city", "bachelor_school",'get_resume', "first_score", "first_result", "first_interviewer_user", "second_result",
         "second_interviewer_user", "hr_score", "hr_result", "last_editor"
     )
     # search_fields 指定那些字段用于搜索过滤 查询字段

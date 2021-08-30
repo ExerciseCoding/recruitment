@@ -478,3 +478,127 @@ Traceback (most recent call last):
 TypeError: HTTP status code must be an integer.
 2021-08-29 14:47:55,076 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
 2021-08-29 14:47:55,793 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-29 23:58:19,967 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:05:04,608 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:05:05,656 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:06:57,725 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:06:58,517 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:10:11,992 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:10:12,917 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:10:22,424 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:10:23,041 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:12:16,944 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:12:17,728 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:15:44,981 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:15:45,865 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:16:23,999 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:16:24,749 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:16:42,462 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:16:42,941 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:18:45,963 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/urls.py changed, reloading.
+2021-08-30 00:18:46,729 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:19:19,745 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/urls.py changed, reloading.
+2021-08-30 00:19:20,423 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:19:36,099 django.request 224 ERROR    Internal Server Error: /resume/add/
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(', '.join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: /resume_form.html
+2021-08-30 00:21:46,990 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:21:47,880 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:21:56,374 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:21:56,906 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:27:19,451 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 00:27:20,415 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:31:52,639 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:35:40,333 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 00:35:41,165 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:36:39,663 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 00:36:40,463 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:36:52,114 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 00:36:52,928 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:38:28,229 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 00:38:28,998 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:38:49,896 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:38:51,087 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:41:08,260 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:41:09,107 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:42:09,830 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 00:42:10,719 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:42:47,298 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 00:42:48,141 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:44:50,074 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/urls.py changed, reloading.
+2021-08-30 00:44:50,931 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:45:29,155 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:45:29,876 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:46:21,085 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:46:21,972 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:46:47,742 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:46:48,394 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:47:29,088 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:47:29,777 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:47:56,283 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:47:56,889 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:48:38,706 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/interview/admin.py changed, reloading.
+2021-08-30 00:48:39,228 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 00:51:54,390 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 00:51:55,181 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 15:03:39,266 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 15:05:28,790 django.request 224 ERROR    Internal Server Error: /resume/add/
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/auth/mixins.py", line 71, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/edit.py", line 172, in post
+    return super().post(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/generic/edit.py", line 142, in post
+    return self.form_valid(form)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/views.py", line 85, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+NameError: name 'HttpResponseRedirect' is not defined
+2021-08-30 15:07:27,260 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/views.py changed, reloading.
+2021-08-30 15:07:27,767 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
+2021-08-30 15:08:56,875 django.request 224 ERROR    Internal Server Error: /admin/jobs/resume/
+Traceback (most recent call last):
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/utils/decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1723, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "/Users/liuhao/opt/anaconda3/lib/python3.8/site-packages/django/contrib/admin/options.py", line 1408, in response_action
+    response = func(self, request, queryset)
+  File "/Users/liuhao/PythonProject/recruitment/jobs/admin.py", line 26, in enter_interview_process
+    candidate.created_date = datetime.now()
+NameError: name 'datetime' is not defined
+2021-08-30 15:09:52,735 django.utils.autoreload 251 INFO     /Users/liuhao/PythonProject/recruitment/jobs/admin.py changed, reloading.
+2021-08-30 15:09:53,531 django.utils.autoreload 637 INFO     Watching for file changes with StatReloader
