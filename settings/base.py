@@ -62,8 +62,12 @@ INSTALLED_APPS = [
 ]
 # 中间件
 MIDDLEWARE = [
+    # 性能统计的中间件
+    'interview.performance.performance_logger_middleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    # 多语言中间件
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -137,10 +141,17 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
+from django.utils.translation import gettext_lazy as _
 
+LANGUAGES = [
+    ('zh-hans', _('Chinese')),
+    ('en', _('English')),
+]
 # 项目的默认语言 中文:zh-hans 英文:en-us
 LANGUAGE_CODE = 'zh-hans'
-
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
