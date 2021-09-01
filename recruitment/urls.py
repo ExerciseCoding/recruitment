@@ -19,13 +19,12 @@ from django.conf.urls import include, url
 from django.utils.translation import gettext as _
 urlpatterns = [
     # 将jobs的urls引用进来
-
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     
     # 注册用户登录接口
     url('accounts/', include('registration.backends.simple.urls')),
-    path('i18n/',include('django.conf.urls.i18n')),
+    # path('i18n/',include('django.conf.urls.i18n')),
     url("", include("jobs.urls")),
 ]
 
